@@ -41,7 +41,7 @@ nginx -s reload
 # clear
 
 # Set up SSL, make sure renewing takes place automatically
-certbot --nginx -d "$domain"
+certbot --nginx --agree-tos --redirect -d "$domain"
 crontab -l > updatedcron
 echo "0 12 * * * /usr/bin/certbot renew --quiet" >> updatedcron
 crontab updatedcron
