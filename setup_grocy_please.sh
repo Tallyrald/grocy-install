@@ -35,9 +35,6 @@ mv nginx_main_config.conf nginx.conf
 # Reload NGINX
 nginx -s reload
 
-# Clear the screen
-# clear
-
 # Set up SSL, make sure renewing takes place automatically
 certbot --nginx --agree-tos --redirect -d "$domain"
 crontab -l > updatedcron
