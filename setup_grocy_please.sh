@@ -29,7 +29,7 @@ mv nginx.grocy.conf "$domain.conf"
 cd /etc/nginx
 wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_main_config.conf
 mv nginx.conf nginx.conf.original
-mv nginx_main_config nginx.conf
+mv nginx_main_config.conf nginx.conf
 
 # Reload NGINX
 nginx -s reload
