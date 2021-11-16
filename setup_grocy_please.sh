@@ -1,6 +1,8 @@
 #!/bin/bash
 read -p 'Please tell me the full domain name (e.g. grocy.example.com) you want to use for reaching Grocy: ' domain
 read -p 'Grocy currency - ISO 4217 code (hit Return for default: USD): ' currency
+currency=${currency:-USD}
+
 # Add PHP repository for getting 8.X
 add-apt-repository -y ppa:ondrej/php
 # Update
