@@ -6,8 +6,8 @@ read -p 'Cloudflare API token: ' token
 # Download updater script & blank config
 mkdir /etc/ddns
 cd /etc/ddns
-wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/cloudflare/cloudflare-update-record_config.yaml
-wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/cloudflare/update_dns_cloudflare.py
+wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/cloudflare/cloudflare-update-record_config.yaml
+wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/cloudflare/update_dns_cloudflare.py
 
 # Replace templates with actual data
 sed -i "s/read_token_placeholder/$token/g" /var/www/html/data/cloudflare-update-record_config.yaml
