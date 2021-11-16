@@ -12,7 +12,7 @@ systemctl enable nginx
 
 # Install the latest Grocy release
 cd /var/www/html
-wget https://releases.grocy.info/latest
+wget -b https://releases.grocy.info/latest
 unzip -fo latest -d /var/www/html && rm latest
 # Make everything compliant with Nginx standards
 chown -R www-data:www-data /var/www
@@ -22,12 +22,12 @@ sed -i "s/Setting('CURRENCY', 'USD');/Setting('CURRENCY', '$currency');/g" /var/
 
 # Set up NGINX with PHP & configuration files
 cd /etc/nginx/conf.d
-wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/fastcgi_params.conf
+wget -b https://raw.githubusercontent.com/Tallyrald/grocy-install/main/fastcgi_params.conf
 mv fastcgi_params.conf fastcgi_params
-wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_grocy.conf
-mv nginx.grocy.conf "$domain.conf"
+wget -b https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_grocy.conf
+mv nginx_grocy.conf "$domain.conf"
 cd /etc/nginx
-wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_main_config.conf
+wget -b https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_main_config.conf
 mv nginx.conf nginx.conf.original
 mv nginx_main_config.conf nginx.conf
 
