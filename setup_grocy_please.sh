@@ -24,18 +24,21 @@ sed -i "s/Setting('CURRENCY', 'USD');/Setting('CURRENCY', '$currency');/g" /var/
 cd /etc/nginx/conf.d
 wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/fastcgi_params.conf
 mv fastcgi_params.conf fastcgi_params
+rm fastcgi_params.conf
 wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_grocy.conf
 mv nginx.grocy.conf "$domain.conf"
+rm nginx_grocy.conf
 cd /etc/nginx
 wget https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_main_config.conf
 mv nginx.conf nginx.conf.original
 mv nginx_main_config.conf nginx.conf
+rm nginx_main_config.conf
 
 # Reload NGINX
 nginx -s reload
 
 # Clear the screen
-clear
+# clear
 
 # Set up SSL, make sure renewing takes place automatically
 certbot --nginx -d "$domain"
