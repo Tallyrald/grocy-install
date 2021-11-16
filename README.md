@@ -35,3 +35,5 @@ Use this config set up automatic DNS record updates for a domain purchased or ma
 The config file template & the updater script can be found in the Cloudflare folder.
 
 Find Grocy at [https://github.com/grocy/grocy](https://github.com/grocy/grocy)
+
+I wrote a detailed [Reddit post](https://www.reddit.com/r/grocy/comments/qvckh7/free_googlehosted_httpssecured_grocy_installation) that explains how to set up a free, Google-hosted, HTTPS secured installation.
