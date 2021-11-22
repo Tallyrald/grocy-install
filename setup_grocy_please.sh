@@ -6,7 +6,7 @@ currency=${currency:-USD}
 # Add PHP repository for getting 8.X
 add-apt-repository -y ppa:ondrej/php
 # Update
-apt-get update && sudo apt-get -y upgrade
+apt-get update && apt-get -y upgrade
 # Install everything we'll need for Grocy, the webserver & HTTPS
 apt-get install -y nginx sqlite3 php8.0-fpm php8.0-sqlite3 php8.0-gd php8.0-mbstring php8.0-intl unzip certbot python3-certbot-nginx
 # Start Nginx
