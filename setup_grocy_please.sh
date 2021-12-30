@@ -15,7 +15,7 @@ systemctl enable nginx
 # Install the latest Grocy release
 cd /var/www/html
 wget -q https://releases.grocy.info/latest
-unzip -fo latest -d /var/www/html && rm latest
+unzip -o latest -d /var/www/html && rm latest
 # Make everything compliant with Nginx standards
 chown -R www-data:www-data /var/www
 # Set up the configuration file for Grocy
