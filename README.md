@@ -19,7 +19,7 @@ A list of things it does:
 - Installs the following:
     nginx - A reverse proxy that handles the website - that is Grocy
     sqlite3 - Database driver
-    php8.0-fpm and additional extensions needed for running Grocy
+    php8.2-fpm and additional extensions needed for running Grocy
     unzip - Needed to unzip Grocy during installation
     certbot - Automated SSL certificate handler in order to enable HTTPS traffic
     python3-certbot-nginx - Extension to make certbot understand NGINX and vice-versa
