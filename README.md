@@ -4,7 +4,7 @@ Scripts and configuration files that help with Grocy installation
 
 Requirements:
 
-- Ubuntu 20.04
+- Ubuntu 22.04 (20.04 no longer supported with Grocy 4)
 - SSH access
 - Internet access on the machine
 
