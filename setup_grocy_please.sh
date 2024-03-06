@@ -8,7 +8,7 @@ add-apt-repository -y ppa:ondrej/php
 # Update
 apt-get update && apt-get -y upgrade
 # Install everything we'll need for Grocy, the webserver & HTTPS
-apt-get install -y nginx sqlite3 php8.2-fpm php8.2-sqlite3 php8.2-gd php8.2-mbstring php8.2-intl unzip certbot python3-certbot-nginx
+apt-get install -y nginx sqlite3 php8.3-fpm php8.3-sqlite3 php8.3-gd php8.3-mbstring php8.3-intl unzip certbot python3-certbot-nginx
 # Start Nginx
 systemctl enable nginx
 
@@ -24,13 +24,13 @@ sed -i "s/Setting('CURRENCY', 'USD');/Setting('CURRENCY', '$currency');/g" /var/
 
 # Set up NGINX with PHP & configuration files
 cd /etc/nginx/conf.d
-wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/fastcgi_params.conf
+wget -q https://raw.githubusercontent.com/LEOSCHUMY/grocy-install/main/fastcgi_params.conf
 mv fastcgi_params.conf fastcgi_params
-wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_grocy.conf
+wget -q https://raw.githubusercontent.com/LEOSCHUMY/grocy-install/main/nginx_grocy.conf
 sed -i "s/placeholder_domain/$domain/g" nginx_grocy.conf
 mv nginx_grocy.conf "$domain.conf"
 cd /etc/nginx
-wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_main_config.conf
+wget -q https://raw.githubusercontent.com/LEOSCHUMY/grocy-install/main/nginx_main_config.conf
 mv nginx.conf nginx.conf.original
 mv nginx_main_config.conf nginx.conf
 
