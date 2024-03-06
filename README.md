@@ -19,7 +19,7 @@ A list of things it does:
 - Installs the following:
     nginx - A reverse proxy that handles the website - that is Grocy
     sqlite3 - Database driver
-    php8.2-fpm and additional extensions needed for running Grocy
+    php8.3-fpm and additional extensions needed for running Grocy
     unzip - Needed to unzip Grocy during installation
     certbot - Automated SSL certificate handler in order to enable HTTPS traffic
     python3-certbot-nginx - Extension to make certbot understand NGINX and vice-versa
@@ -36,4 +36,4 @@ The config file template & the updater script can be found in the Cloudflare fol
 
 Find Grocy at [https://github.com/grocy/grocy](https://github.com/grocy/grocy)
 
-I wrote a detailed [Reddit post](https://www.reddit.com/r/grocy/comments/qvckh7/free_googlehosted_httpssecured_grocy_installation) that explains how to set up a free, Google-hosted, HTTPS secured installation.
+Tallyrald wrote a detailed [Reddit post](https://www.reddit.com/r/grocy/comments/qvckh7/free_googlehosted_httpssecured_grocy_installation) that explains how to set up a free, Google-hosted, HTTPS secured installation.
