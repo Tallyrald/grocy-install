@@ -24,13 +24,13 @@ sed -i "s/Setting('CURRENCY', 'USD');/Setting('CURRENCY', '$currency');/g" /var/
 
 # Set up NGINX with PHP & configuration files
 cd /etc/nginx/conf.d
-wget -q https://raw.githubusercontent.com/LEOSCHUMY/grocy-install/main/fastcgi_params.conf
+wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/fastcgi_params.conf
 mv fastcgi_params.conf fastcgi_params
-wget -q https://raw.githubusercontent.com/LEOSCHUMY/grocy-install/main/nginx_grocy.conf
+wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_grocy.conf
 sed -i "s/placeholder_domain/$domain/g" nginx_grocy.conf
 mv nginx_grocy.conf "$domain.conf"
 cd /etc/nginx
-wget -q https://raw.githubusercontent.com/LEOSCHUMY/grocy-install/main/nginx_main_config.conf
+wget -q https://raw.githubusercontent.com/Tallyrald/grocy-install/main/nginx_main_config.conf
 mv nginx.conf nginx.conf.original
 mv nginx_main_config.conf nginx.conf
 
