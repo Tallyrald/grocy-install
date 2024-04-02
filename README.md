@@ -36,4 +36,4 @@ The config file template & the updater script can be found in the Cloudflare fol
 
 Find Grocy at [https://github.com/grocy/grocy](https://github.com/grocy/grocy)
 
-Tallyrald wrote a detailed [Reddit post](https://www.reddit.com/r/grocy/comments/qvckh7/free_googlehosted_httpssecured_grocy_installation) that explains how to set up a free, Google-hosted, HTTPS secured installation.
+I wrote a detailed [Reddit post](https://www.reddit.com/r/grocy/comments/qvckh7/free_googlehosted_httpssecured_grocy_installation) that explains how to set up a free, Google-hosted, HTTPS secured installation.
